@@ -52,7 +52,7 @@ public class CreateContact extends AppCompatActivity implements View.OnClickList
             } else if (v.getId() == R.id.ivSad) {
                 intent.putExtra("mood", "sad");
             }
-            setResult(RESULT_OK,intent);
+            setResult(RESULT_OK, intent);
             CreateContact.this.finish();
         }
     }

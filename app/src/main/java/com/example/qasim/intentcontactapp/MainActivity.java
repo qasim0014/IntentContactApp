@@ -44,15 +44,15 @@ public class MainActivity extends AppCompatActivity {
         ivPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-Intent intent=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+number));
-startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + number));
+                startActivity(intent);
             }
         });
 
         ivWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://"+web));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + web));
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ startActivity(intent);
         ivLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="+map));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + map));
                 startActivity(intent);
             }
         });
@@ -90,10 +90,8 @@ startActivity(intent);
                 } else if (mood.equals("sad")) {
                     ivMood.setImageResource(R.drawable.sad);
                 }
-            }
-            else
-            {
-                Toast.makeText(MainActivity.this,"No Data Passed",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this, "No Data Passed", Toast.LENGTH_SHORT).show();
             }
         }
     }
